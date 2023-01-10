@@ -1,7 +1,7 @@
 pipeline{
     agent any
     tools { 
-        maven 'maven3'
+        maven 'Maven'
     }
     stages
        {
@@ -31,7 +31,7 @@ pipeline{
                 }
             }
 
-            post {  
+         post {  
          always {  
              echo 'This will always run'  
          }  
