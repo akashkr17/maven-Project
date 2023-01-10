@@ -30,22 +30,6 @@ pipeline{
                     sh "mvn package"
                 }
             }
-
-         post {  
-         always {  
-             echo 'This will always run'  
-         }  
-         success {  
-             emailext to: "akash.kumar@knoldus.com",
-             subject: "Test Email",
-             body: "Test Success"
-         }  
-         failure {  
-             emailext to: "akash.kumar@knoldus.com",
-             subject: "Test Email",
-             body: "Test Failure"
-         }  
-     }  
         
     }
 }
